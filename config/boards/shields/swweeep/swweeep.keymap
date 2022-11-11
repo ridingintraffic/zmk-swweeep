@@ -39,9 +39,9 @@
 / {
 
     behaviors {
-        hm: homerow_mods {
+        hm: layer_mods {
             compatible = "zmk,behavior-hold-tap";
-            label = "HOMEROW_MODS";
+            label = "LAYER_MODS";
             #binding-cells = <2>;
             tapping-term-ms = <200>;
             quick_tap_ms = <0>;
@@ -59,6 +59,7 @@
         };
     };
 
+
     keymap {
         compatible = "zmk,keymap";
 
@@ -66,10 +67,10 @@
             label = "Default";
 
             bindings = <
-    &kp Q        &kp W        &kp F       &kp P         &kp B                                       &kp J         &kp L        &lt WINNAV U  &kp Y       &kp SEMI
-    &hm LCTL A   &hm LGUI R   &hm LALT S  &hs LSHIFT T  &kp G                                       &lt MOUSE M   &hs RSHIFT N &hm RALT E    &hm RGUI I  &hm RCTL O
-    &kp Z        &kp X        &kp C       &kp D         &kp V                                       &kp K         &kp H        &kp COMMA     &kp DOT     &kp FSLH
-                                          &kp DEL       &lt NAV RET  &lt FUNC TAB  &lt MEDIA BSPC   &lt SYM SPACE &kp SQT
+    &kp Q        &kp W        &kp E       &kp R         &kp T          &kp Y        &kp U     &kp I       &kp O         &kp P
+    &kp A        &kp S        &kp D       &kp F         &kp G          &kp H        &kp J     &kp K       &kp L         &kp SEMI
+    &kp Z        &kp X        &kp C       &kp V         &kp B          &kp N        &kp M     &kp COMMA   &kp DOT       &kp FSLH
+                        &lt 1 LALT    &kp LGUI  &kp BACKSPACE          &mt LC(LS(LALT)) SPACE &mt LSHIFT ENTER  &lt 2 C_VOL_UP
             >;
         };
 
@@ -77,22 +78,22 @@
             label = "Navigation";
 
             bindings = <
-    &kp ESC      &kp PG_UP    &kp UP      &kp PG_DN     &trans                                      &kp ASTRK     &kp N7       &kp N8        &kp N9      &kp MINUS
-    &kp HOME     &kp LEFT     &kp DOWN    &kp RIGHT     &kp END                                     &kp FSLH      &kp N4       &kp N5        &kp N6      &kp PLUS
-    &trans       &trans       &trans      &trans        &trans                                      &kp EQUAL     &kp N1       &kp N2        &kp N3      &kp N0
-                                          &trans        &trans       &kp TAB       &kp BSPC         &kp SPACE     &kp DOT
-            >;
+ &kp N1       &kp N2       &kp N3      &kp N4        &kp N5                            &kp N6          &kp N7           &kp N8        &kp N9      &kp N0     
+    &bt BT_CLR    &bt BT_SEL 0 &bt BT_SEL 1 &bt BT_SEL 2 &bt BT_SEL 3                 &kp LEFT        &kp DOWN         &kp UP        &kp RIGHT   &kp PLUS
+ &out OUT_USB  &out OUT_BLE       &trans      &trans        &trans                    &rgb_ug RGB_TOG &rgb_ug RGB_EFR  &rgb_ug RGB_EFF &rgb_ug RGB_BRI &rgb_ug RGB_BRD
+                              &kp LCTL  &kp LALT  &kp DELETE      &mt SPACE LC(LS(LALT))   &kp LC(LEFT)    &kp LC(RIGHT)
+               >;
         };
 
         sym_layer {
             label = "Symbols";
 
             bindings = <
-    &kp EXCL     &kp AT       &kp HASH        &kp DLLR         &kp PRCNT                                   &kp CARET     &kp AMPS          &kp ASTRK     &kp UNDER   &kp EQUAL
-    &kp MINUS    &kp LBKT     &kp LBRC        &kp LPAR         &kp LT                                      &kp GT        &kp RPAR          &kp RBRC      &kp RBKT    &kp PLUS
-    &kp CAPS     &kp GRAVE    &kp LC(LS(TAB)) &kp LC(LG(LEFT)) &caps_word                                  &trans        &kp LC(LG(RIGHT)) &kp LC(TAB)   &trans      &kp BSLH
-                                              &trans           &kp RET       &kp DEL        &kp BSPC       &trans        &trans
-            >;
+    &kp EXCL &kp AT &kp HASH &kp DOLLAR &kp PRCNT                                      &kp CARET &kp AMPS  &kp KP_MULTIPLY &kp LPAR  &kp RPAR
+    &bt BT_CLR    &bt BT_SEL 0 &bt BT_SEL 1 &bt BT_SEL 2 &bt BT_SEL 3                  &kp LEFT  &kp DOWN  &kp UP        &kp RIGHT   &kp PLUS    &trans
+    &out OUT_USB  &out OUT_BLE       &trans      &trans        &trans                  &rgb_ug RGB_TOG &rgb_ug RGB_EFR  &rgb_ug RGB_EFF &rgb_ug RGB_BRI &rgb_ug
+                                    &trans        &kp LALT      &kp TAB        &kp LC(LEFT)   &kp LC(UP)    &kp LC(RIGHT)
+                >;
         };
 
         func_layer {
