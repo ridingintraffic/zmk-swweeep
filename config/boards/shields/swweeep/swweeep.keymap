@@ -6,10 +6,7 @@
 #define DEFAULT 0
 #define NAV     1
 #define SYM     2
-#define FUNC    3
-#define MEDIA   4
-#define MOUSE   5
-#define WINNAV  6
+
 
 &caps_word {
     continue-list = <UNDERSCORE MINUS>;
@@ -78,9 +75,9 @@
             label = "Navigation";
 
             bindings = <
- &kp N1       &kp N2       &kp N3      &kp N4        &kp N5                            &kp N6          &kp N7           &kp N8        &kp N9      &kp N0     
+ &kp N1       &kp N2       &kp N3      &kp N4        &kp N5                            &kp N6          &kp N7           &kp N8        &kp N9      &kp N0
     &bt BT_CLR    &bt BT_SEL 0 &bt BT_SEL 1 &bt BT_SEL 2 &bt BT_SEL 3                 &kp LEFT        &kp DOWN         &kp UP        &kp RIGHT   &kp PLUS
- &out OUT_USB  &out OUT_BLE       &trans      &trans        &trans                    &rgb_ug RGB_TOG &rgb_ug RGB_EFR  &rgb_ug RGB_EFF &rgb_ug RGB_BRI &rgb_ug RGB_BRD
+ &out OUT_USB  &out OUT_BLE       &trans      &trans        &trans                    &trans &trans  &trans &trans &trans
                               &kp LCTL  &kp LALT  &kp DELETE      &mt SPACE LC(LS(LALT))   &kp LC(LEFT)    &kp LC(RIGHT)
                >;
         };
@@ -90,54 +87,10 @@
 
             bindings = <
     &kp EXCL &kp AT &kp HASH &kp DOLLAR &kp PRCNT                                      &kp CARET &kp AMPS  &kp KP_MULTIPLY &kp LPAR  &kp RPAR
-    &bt BT_CLR    &bt BT_SEL 0 &bt BT_SEL 1 &bt BT_SEL 2 &bt BT_SEL 3                  &kp LEFT  &kp DOWN  &kp UP        &kp RIGHT   &kp PLUS    &trans
-    &out OUT_USB  &out OUT_BLE       &trans      &trans        &trans                  &rgb_ug RGB_TOG &rgb_ug RGB_EFR  &rgb_ug RGB_EFF &rgb_ug RGB_BRI &rgb_ug
+    &bt BT_CLR    &bt BT_SEL 0 &bt BT_SEL 1 &bt BT_SEL 2 &bt BT_SEL 3                  &kp LEFT  &kp DOWN  &kp UP        &kp RIGHT   &kp PLUS
+    &out OUT_USB  &out OUT_BLE       &trans      &trans        &trans                  &trans &trans  &trans &trans
                                     &trans        &kp LALT      &kp TAB        &kp LC(LEFT)   &kp LC(UP)    &kp LC(RIGHT)
                 >;
-        };
-
-        func_layer {
-            label = "Function";
-
-            bindings = <
-    &bootloader  &kp LS(PG_UP) &kp LS(UP)   &kp LS(PG_DN) &trans                                         &kp C_MUTE       &kp F7       &kp F8        &kp F9      &kp F10
-    &kp LS(HOME) &kp LS(LEFT)  &kp LS(DOWN) &kp LS(RIGHT) &kp LS(END)                                    &kp K_VOL_UP     &kp F4       &kp F5        &kp F6      &kp F11
-    &bt BT_SEL 3 &bt BT_SEL 2  &bt BT_SEL 1 &bt BT_SEL 0  &bt BT_CLR                                     &kp K_VOL_DN     &kp F1       &kp F2        &kp F3      &kp F12
-                                            &out OUT_USB  &out OUT_BLE     &trans      &kp C_PLAY_PAUSE  &trans           &kp SPACE
-            >;
-        };
-
-        media_layer {
-            label = "Media";
-
-            bindings = <
-    &trans       &trans       &trans        &trans            &trans                                      &trans             &bt BT_PRV        &bt BT_NXT         &trans         &trans
-    &trans       &trans       &trans        &trans            &trans                                      &trans             &trans            &trans             &trans         &trans
-    &trans       &trans       &trans        &trans            &trans                                      &bt BT_CLR         &bt BT_SEL 0      &bt BT_SEL 1       &bt BT_SEL 2   &bt BT_SEL 3
-                                            &trans            &trans        &trans         &trans         &out OUT_BLE       &out OUT_USB
-            >;
-        };
-
-        mouse_layer {
-            label = "Mouse";
-
-            bindings = <
-    &bootloader &trans      &trans      &trans      &trans                                           &trans      &trans      &trans      &trans      &trans
-    &trans      &trans      &trans      &trans      &trans                                           &trans      &trans      &trans      &trans      &trans
-    &trans      &trans      &trans      &trans      &trans                                           &trans      &trans      &trans      &trans      &trans
-                                        &trans      &trans          &trans           &trans          &trans      &trans
-            >;
-        };
-
-        winnav_layer {
-            label = "Win Navigation";
-
-            bindings = <
-    &trans       &trans       &kp LG(UP)   &trans        &trans                                      &trans      &trans      &trans      &trans      &trans
-    &trans       &kp LG(LEFT) &kp LG(DOWN) &kp LG(RIGHT) &trans                                      &trans      &trans      &trans      &trans      &trans
-    &trans       &trans       &trans       &trans        &trans                                      &trans      &trans      &trans      &trans      &trans
-                                           &trans        &trans        &trans         &trans         &trans      &trans
-            >;
         };
     };
 };
