@@ -65,7 +65,7 @@
             #binding-cells = <2>;
             tapping-term-ms = <250>;
             quick_tap_ms = <0>;
-            flavor = "balanced";
+            flavor = "tap-preferred";
             bindings = <&kp>, <&kp>;
         };
     };
@@ -78,10 +78,10 @@
             label = "Default";
 
             bindings = <
-    &kp Q        &kp W        &kp E       &kp R         &kp T          &kp Y        &kp U     &kp I       &kp O         &kp P
-    &kp A        &kp S        &kp D       &hs LSHIFT F         &kp G          &kp H        &hs RSHIFT J     &kp K       &kp L         &kp SEMI
-    &kp Z        &kp X        &kp C       &kp V         &kp B          &kp N        &kp M     &kp COMMA   &kp DOT       &kp FSLH
-                        &lt 1 LALT    &kp LGUI  &kp BACKSPACE          &mt LC(LS(LALT)) SPACE &lt 3 ENTER  &lt 2 C_VOL_UP
+    &kp Q        &kp W        &kp E       &kp R         &kp T          &kp Y                  &kp U            &kp I       &kp O         &kp P
+    &kp A        &kp S        &kp D       &hs LSHIFT F  &kp G          &kp H                  &hs RSHIFT J     &kp K       &kp L         &kp SEMI
+    &kp Z        &kp X        &kp C       &kp V         &kp B          &kp N                  &kp M            &kp COMMA   &kp DOT       &kp FSLH
+                        &lt 1 LALT    &kp LGUI  &kp BACKSPACE          &mt LC(LS(LALT)) SPACE &lt 3 ENTER      &lt 2 C_VOL_UP
             >;
         };
 
@@ -91,8 +91,8 @@
             bindings = <
  &kp N1       &kp N2       &kp N3      &kp N4        &kp N5                            &kp N6          &kp N7           &kp N8        &kp N9      &kp N0
  &bt BT_CLR    &bt BT_SEL 0 &bt BT_SEL 1 &bt BT_SEL 2 &bt BT_SEL 3                 &kp LEFT        &kp DOWN         &kp UP        &kp RIGHT   &kp PLUS
- &out OUT_USB  &out OUT_BLE       &trans      &trans        &trans                    &trans &trans  &trans &trans &trans
-                              &kp LCTL  &kp LALT  &kp DELETE      &mt SPACE LC(LS(LALT))   &kp LC(LEFT)    &kp LC(RIGHT)
+ &out OUT_USB  &out OUT_BLE       &trans      &trans        &trans       &trans                   &trans  &trans &trans &trans
+                                  &kp LCTL  &kp LALT  &kp DELETE         &mt SPACE LC(LS(LALT))   &kp LC(LEFT)    &kp LC(RIGHT)
                >;
         };
 
@@ -107,12 +107,12 @@
                 >;
         };
         sin_layer {
-            label = "Sinners";
+            label = "sinners";
 
             bindings = <
-    &gresc  &kp AT &kp HASH &kp DOLLAR &kp PRCNT                                      &kp CARET &kp AMPS  &kp KP_MULTIPLY &kp LPAR  &kp RPAR
-    &kp TAB    &bt BT_SEL 0 &bt BT_SEL 1 &bt BT_SEL 2 &bt BT_SEL 3                  &kp LEFT  &kp DOWN  &kp UP        &kp RIGHT   &kp PLUS
-    &out OUT_USB  &out OUT_BLE       &trans      &trans        &trans                  &trans &trans  &trans &trans
+    &gresc  &kp AT &kp HASH &kp DOLLAR &kp PRCNT                                      &kp CARET &kp AMPS  &kp KP_MULTIPLY &kp LPAR  &kp MINUS
+    &kp TAB &trans &trans   &trans     &trans                  &kp LEFT  &kp DOWN  &kp UP        &kp RIGHT   &kp EQUAL
+    &trans  &trans &trans   &trans     &trans                  &trans &trans  &trans &kp SINGLE_QUOTE
                                     &trans        &kp LALT      &kp TAB        &kp LC(LEFT)   &kp LC(UP)    &kp LC(RIGHT)
                 >;
         };
